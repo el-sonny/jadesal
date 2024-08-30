@@ -48,7 +48,7 @@
 
   <!-- Mobile Menu -->
   {#if isMenuOpen}
-    <nav transition:slide class="md:hidden bg-white bg-opacity-10 absolute w-full z-50">
+    <nav transition:slide class="md:hidden bg-white bg-opacity-10 w-full z-50">
       <ul class="px-2 pt-2 pb-3 space-y-1">
         {#each menuItems as item}
           <li>

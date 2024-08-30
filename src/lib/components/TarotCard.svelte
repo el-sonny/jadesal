@@ -11,9 +11,9 @@
 	}
 </script>
 
-<button class="w-64 h-96 perspective-1000 cursor-pointer" on:click={flipCard} >
+<button class="w-64 h-96 perspective-1000 cursor-pointer" on:click={flipCard}>
 	<div
-		class="relative w-full h-full transition-transform duration-600 transform-style-preserve-3d " 
+		class="relative w-full h-full transition-transform duration-600 transform-style-preserve-3d"
 		class:rotate-y-180={isFlipped}
 	>
 		<!-- Back of the card -->
@@ -35,24 +35,17 @@
 	</div>
 </button>
 
-<style lang="postcss">
-	@tailwind base;
-	@tailwind components;
-	@tailwind utilities;
-
-	@layer utilities {
-		.backface-hidden {
-			backface-visibility: hidden;
-		}
-		.perspective-1000 {
-			perspective: 1000px;
-		}
-		.transform-style-preserve-3d {
-			transform-style: preserve-3d;
-		}
-		.rotate-y-180 {
-			transform: rotateY(180deg);
-		}
-        
+<style>
+	.backface-hidden {
+		backface-visibility: hidden;
+	}
+	.perspective-1000 {
+		perspective: 1000px;
+	}
+	.transform-style-preserve-3d {
+		transform-style: preserve-3d;
+	}
+	.rotate-y-180 {
+		transform: rotateY(180deg);
 	}
 </style>
