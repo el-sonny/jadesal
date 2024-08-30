@@ -16,7 +16,7 @@
 	let ctx: CanvasRenderingContext2D | null;
 	let animationId: number;
 	let stars: Star[] = [];
-	const numStars = 200;
+	const numStars = 100;
 
 	function drawStar(star: Star, time: number) {
 		const twinkle = Math.sin(time * star.twinkleSpeed + star.twinklePhase) * 0.5 + 0.5;
@@ -105,14 +105,14 @@
 	});
 
 	onDestroy(() => {
-		//cancelAnimationFrame(animationId);
-		if (browser) {
+        if (browser) {
+            window.cancelAnimationFrame(animationId);
 			window.removeEventListener('resize', handleResize);
 		}
 	});
 </script>
 
-<canvas bind:this={canvas} class="fixed inset-0 w-full h-full bg-black"></canvas>
+<canvas bind:this={canvas} class="fixed inset-0 w-full h-full bg-black -z-50"></canvas>
 
 <style>
 	/* You can add any additional styles here if needed */

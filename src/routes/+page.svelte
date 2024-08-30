@@ -1,9 +1,7 @@
 <script>
-	import Background from '$lib/components/Background.svelte';
 	import TarotCard from '$lib/components/TarotCard.svelte';
 </script>
 
-<Background />
 <main class="w-full h-full">
 	<div class="mx-auto my-28 w-fit">
 		<TarotCard
